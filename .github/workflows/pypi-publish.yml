@@ -17,6 +17,9 @@ on:
   release:
     types: [published]
 
+permissions:
+  contents: read
+
 jobs:
   build-wheels:
     runs-on: ubuntu-latest
@@ -37,6 +40,8 @@ jobs:
         path: dist
 
   publish:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     permissions: {}
     needs:
