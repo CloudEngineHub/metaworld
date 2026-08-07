@@ -40,7 +40,6 @@ jobs:
     permissions:
       contents: read
     runs-on: ubuntu-latest
-    permissions: {}
     needs:
     - build-wheels
     if: github.event_name == 'release' && github.event.action == 'published'
